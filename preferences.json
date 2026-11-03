@@ -1,9 +1,10 @@
 [
   {
     "property": "mod.ayu_zen.variant",
-    "label": "Variant",
+    "label": "Dark Variant",
     "type": "dropdown",
-    "defaultValue": "light",
+    "defaultValue": "dark",
+    "placeholder": false,
     "options": [
       { "label": "Mirage", "value": "mirage" },
       { "label": "Dark", "value": "dark" },
