@@ -1,34 +1,36 @@
 /* Ayu Light */
-:root {
-  --ayu-bg: #fafafa;
-  --ayu-surface: #e7eaed;
-  --ayu-raised: #d8d8d7;
-  --ayu-muted: #828c9a;
-  --ayu-fg: #5c6166;
-  --ayu-accent: #f29718;
-  --ayu-orange: #fa8532;
-  --ayu-red: #e65050;
-  --ayu-green: #86b300;
-  --ayu-blue: #22a4e6;
+@media (-moz-pref("zen.view.window.scheme", 1)) {
+  :root {
+    --ayu-bg: #fafafa;
+    --ayu-surface: #e7eaed;
+    --ayu-raised: #d8d8d7;
+    --ayu-muted: #828c9a;
+    --ayu-fg: #5c6166;
+    --ayu-accent: #f29718;
+    --ayu-orange: #fa8532;
+    --ayu-red: #e65050;
+    --ayu-green: #86b300;
+    --ayu-blue: #22a4e6;
+  }
 }
 
 /* Zen Dark, or Zen Auto with a dark system theme */
-@media
-  (-moz-pref("zen.view.window.scheme", 0)),
+@media (-moz-pref("zen.view.window.scheme", 0)),
   (-moz-pref("zen.view.window.scheme", 2)) and (-moz-system-dark-theme) {
-
   /* Ayu Dark */
-  :root {
-    --ayu-bg: #0f1419;
-    --ayu-surface: #131721;
-    --ayu-raised: #2d3640;
-    --ayu-muted: #5c6773;
-    --ayu-fg: #bfbdb6;
-    --ayu-accent: #e6b450;
-    --ayu-orange: #ff8f40;
-    --ayu-red: #d95757;
-    --ayu-green: #aad94c;
-    --ayu-blue: #59c2ff;
+  @media (-moz-pref("mod.ayu_zen.variant", "dark")) {
+    :root {
+      --ayu-bg: #0f1419;
+      --ayu-surface: #131721;
+      --ayu-raised: #2d3640;
+      --ayu-muted: #5c6773;
+      --ayu-fg: #bfbdb6;
+      --ayu-accent: #e6b450;
+      --ayu-orange: #ff8f40;
+      --ayu-red: #d95757;
+      --ayu-green: #aad94c;
+      --ayu-blue: #59c2ff;
+    }
   }
 
   @media (-moz-pref("mod.ayu_zen.variant", "mirage")) {
@@ -127,11 +129,7 @@
   --ayu-on-primary: var(--ayu-bg);
 
   /* Darken the accent where Zen uses it as a foreground color. */
-  --ayu-ui-accent: color-mix(
-    in srgb,
-    var(--ayu-accent) 65%,
-    black
-  );
+  --ayu-ui-accent: color-mix(in srgb, var(--ayu-accent) 65%, black);
 
   --zen-primary-color: var(--ayu-ui-accent) !important;
 
@@ -144,8 +142,7 @@
   --toolbar-color-scheme: var(--ayu-zen-scheme) !important;
 }
 
-@media
-  (-moz-pref("mod.ayu_zen.variant", "mirage")),
+@media (-moz-pref("mod.ayu_zen.variant", "mirage")),
   (-moz-pref("mod.ayu_zen.variant", "dark")),
   (-moz-pref("mod.ayu_zen.variant", "evolve")) {
   :root {
