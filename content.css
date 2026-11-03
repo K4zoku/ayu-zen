@@ -1,0 +1,220 @@
+/* =========================================================
+ * Ayu palettes
+ * ========================================================= */
+
+/* Light */
+@media (-moz-pref("zen.view.window.scheme", 1)),
+  (-moz-pref("zen.view.window.scheme", 2)) and
+    (not (-moz-system-dark-theme)) {
+  :root {
+    --ayu-bg: #fafafa;
+    --ayu-surface: #e7eaed;
+    --ayu-raised: #d8d8d7;
+    --ayu-muted: #828c9a;
+    --ayu-fg: #5c6166;
+
+    --ayu-accent: #f29718;
+    --ayu-orange: #fa8532;
+    --ayu-red: #e65050;
+    --ayu-green: #86b300;
+    --ayu-blue: #22a4e6;
+
+    --ayu-content-accent: color-mix(
+      in srgb,
+      var(--ayu-accent) 65%,
+      black
+    );
+  }
+}
+
+/* Dark appearance */
+@media (-moz-pref("zen.view.window.scheme", 0)),
+  (-moz-pref("zen.view.window.scheme", 2)) and (-moz-system-dark-theme) {
+  :root {
+    --ayu-content-accent: var(--ayu-accent);
+  }
+
+  /* Mirage */
+  @media (-moz-pref("mod.ayu_zen.variant", "mirage")) {
+    :root {
+      --ayu-bg: #1f2430;
+      --ayu-surface: #1a1f29;
+      --ayu-raised: #323843;
+      --ayu-muted: #565b66;
+      --ayu-fg: #cccac2;
+
+      --ayu-accent: #ffcc66;
+      --ayu-orange: #ffa659;
+      --ayu-red: #ff6666;
+      --ayu-green: #d5ff80;
+      --ayu-blue: #73d0ff;
+    }
+  }
+
+  /* Dark */
+  @media (-moz-pref("mod.ayu_zen.variant", "dark")) {
+    :root {
+      --ayu-bg: #0f1419;
+      --ayu-surface: #131721;
+      --ayu-raised: #2d3640;
+      --ayu-muted: #5c6773;
+      --ayu-fg: #bfbdb6;
+
+      --ayu-accent: #e6b450;
+      --ayu-orange: #ff8f40;
+      --ayu-red: #d95757;
+      --ayu-green: #aad94c;
+      --ayu-blue: #59c2ff;
+    }
+  }
+
+  /* Evolve */
+  @media (-moz-pref("mod.ayu_zen.variant", "evolve")) {
+    :root {
+      --ayu-bg: #020202;
+      --ayu-surface: #0d0d0d;
+      --ayu-raised: #2d3640;
+      --ayu-muted: #5c6773;
+      --ayu-fg: #bfbdb6;
+
+      --ayu-accent: #e6b450;
+      --ayu-orange: #ff8f40;
+      --ayu-red: #dd3e25;
+      --ayu-green: #aad94c;
+      --ayu-blue: #59c2ff;
+    }
+  }
+}
+
+/* =========================================================
+ * Common about: pages
+ * ========================================================= */
+
+@-moz-document url-prefix("about:") {
+  :root {
+    /* Background and foreground */
+    --in-content-page-background: var(--ayu-bg) !important;
+    --in-content-page-color: var(--ayu-fg) !important;
+    --in-content-text-color: var(--ayu-fg) !important;
+
+    --in-content-box-background: var(--ayu-surface) !important;
+
+    /* Accent */
+    --color-accent-primary: var(--ayu-content-accent) !important;
+    --color-accent-primary-hover: color-mix(
+      in srgb,
+      var(--ayu-content-accent) 85%,
+      var(--ayu-fg)
+    ) !important;
+    --color-accent-primary-active: var(--ayu-accent) !important;
+
+    --in-content-accent-color: var(--ayu-content-accent) !important;
+
+    /* Links */
+    --link-color: var(--ayu-content-accent) !important;
+    --link-color-hover: var(--ayu-orange) !important;
+
+    /* Zen */
+    --zen-primary-color: var(--ayu-accent) !important;
+    --zen-colors-primary: var(--ayu-raised) !important;
+    --zen-colors-secondary: var(--ayu-raised) !important;
+    --zen-colors-tertiary: var(--ayu-surface) !important;
+
+    background-color: var(--ayu-bg) !important;
+  }
+}
+
+/* =========================================================
+ * New Tab / Home
+ * ========================================================= */
+
+@-moz-document url("about:newtab"), url("about:home") {
+  :root {
+    --newtab-background-color: var(--ayu-bg) !important;
+    --newtab-background-color-secondary: var(--ayu-surface) !important;
+
+    --newtab-element-hover-color: var(--ayu-raised) !important;
+
+    --newtab-text-primary-color: var(--ayu-fg) !important;
+    --newtab-wordmark-color: var(--ayu-fg) !important;
+
+    --newtab-primary-action-background: var(--ayu-content-accent) !important;
+  }
+
+  .icon {
+    color: var(--ayu-content-accent) !important;
+  }
+
+  .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
+    color: var(--ayu-content-accent) !important;
+  }
+
+  .compact-cards .card-outer .card-context .card-context-icon.icon-download {
+    fill: var(--ayu-green) !important;
+  }
+}
+
+/* =========================================================
+ * Preferences
+ * ========================================================= */
+
+@-moz-document url-prefix("about:preferences") {
+  :root {
+    --in-content-text-color: var(--ayu-fg) !important;
+    --in-content-box-background: var(--ayu-raised) !important;
+
+    --zen-colors-primary: var(--ayu-raised) !important;
+    --zen-colors-tertiary: var(--ayu-surface) !important;
+    --zen-primary-color: var(--ayu-accent) !important;
+  }
+
+  groupbox,
+  moz-card {
+    background-color: var(--ayu-bg) !important;
+  }
+
+  button,
+  groupbox menulist {
+    background-color: var(--ayu-raised) !important;
+    color: var(--ayu-fg) !important;
+  }
+
+  .main-content {
+    background-color: var(--ayu-surface) !important;
+  }
+}
+
+/* =========================================================
+ * Add-ons
+ * ========================================================= */
+
+@-moz-document url-prefix("about:addons") {
+  :root {
+    --zen-dark-color-mix-base: var(--ayu-surface) !important;
+    --background-color-box: var(--ayu-bg) !important;
+  }
+}
+
+/* =========================================================
+ * Protections
+ * ========================================================= */
+
+@-moz-document url-prefix("about:protections") {
+  :root {
+    --in-content-primary-button-background: var(--ayu-raised) !important;
+    --in-content-primary-button-text-color: var(--ayu-fg) !important;
+
+    --in-content-primary-button-background-hover: var(--ayu-surface) !important;
+    --in-content-primary-button-text-color-hover: var(--ayu-fg) !important;
+
+    --social-color: var(--ayu-orange) !important;
+    --cookie-color: var(--ayu-blue) !important;
+    --fingerprinter-color: var(--ayu-accent) !important;
+    --cryptominer-color: var(--ayu-red) !important;
+    --tracker-color: var(--ayu-green) !important;
+  }
+
+  .card {
+    background-color: var(--ayu-raised) !important;
+  }
+}

@@ -5,7 +5,8 @@
   "author": "Kazoku",
   "version": "1.0.0",
   "style": {
-    "chrome": "chrome.css"
+    "chrome": "chrome.css",
+    "content": "content.css"
   },
   "preferences": "preferences.json",
   "fork": ["zen"],
