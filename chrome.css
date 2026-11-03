@@ -219,3 +219,39 @@ menupopup {
   --panel-background-color: var(--ayu-surface) !important;
   --panel-color: var(--ayu-fg) !important;
 }
+
+/* =========================================================
+ * Active tab indicator
+ * ========================================================= */
+
+@media (-moz-pref("mod.ayu_zen.active_tab_indicator")) {
+  #navigator-toolbox .tabbrowser-tab[selected] .tab-background {
+    position: relative;
+  }
+
+  #navigator-toolbox .tabbrowser-tab[selected] .tab-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    width: 3px;
+    background-color: var(--ayu-accent);
+    pointer-events: none;
+  }
+
+  /* Container tabs use their assigned color */
+  #navigator-toolbox
+    .tabbrowser-tab[selected][usercontextid]:not([usercontextid="0"])
+    .tab-background::after {
+    background-color: var(--identity-tab-color, var(--ayu-accent));
+  }
+
+  /* Right sidebar */
+  #navigator-toolbox[zen-right-side="true"]
+    .tabbrowser-tab[selected] .tab-background::after {
+    left: auto;
+    right: 0;
+  }
+}

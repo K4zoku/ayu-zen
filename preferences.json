@@ -10,5 +10,11 @@
       { "label": "Dark", "value": "dark" },
       { "label": "Evolve", "value": "evolve" }
     ]
+  },
+  {
+    "property": "mod.ayu_zen.active_tab_indicator",
+    "label": "Active Tab Indicator",
+    "type": "checkbox",
+    "defaultValue": true
   }
 ]
