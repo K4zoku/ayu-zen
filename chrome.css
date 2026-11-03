@@ -1,0 +1,124 @@
+/* Ayu Light */
+@media (-moz-pref("mod.ayu_zen.variant", "light")) {
+  :root {
+    --ayu-bg: #fafafa;
+    --ayu-surface: #e7eaed;
+    --ayu-raised: #d8d8d7;
+    --ayu-muted: #828c9a;
+    --ayu-fg: #5c6166;
+    --ayu-accent: #f29718;
+    --ayu-orange: #fa8532;
+    --ayu-red: #e65050;
+    --ayu-green: #86b300;
+    --ayu-blue: #22a4e6;
+    color-scheme: light !important;
+  }
+}
+
+/* Ayu Mirage */
+@media (-moz-pref("mod.ayu_zen.variant", "mirage")) {
+  :root {
+    --ayu-bg: #1f2430;
+    --ayu-surface: #1a1f29;
+    --ayu-raised: #323843;
+    --ayu-muted: #565b66;
+    --ayu-fg: #cccac2;
+    --ayu-accent: #ffcc66;
+    --ayu-orange: #ffa659;
+    --ayu-red: #ff6666;
+    --ayu-green: #d5ff80;
+    --ayu-blue: #73d0ff;
+  }
+}
+
+/* Ayu Evolve */
+@media (-moz-pref("mod.ayu_zen.variant", "evolve")) {
+  :root {
+    --ayu-bg: #020202;
+    --ayu-surface: #0d0d0d;
+    --ayu-raised: #2d3640;
+    --ayu-muted: #5c6773;
+    --ayu-fg: #bfbdb6;
+    --ayu-accent: #e6b450;
+    --ayu-orange: #ff8f40;
+    --ayu-red: #dd3e25;
+    --ayu-green: #aad94c;
+    --ayu-blue: #59c2ff;
+  }
+}
+
+/* Ayu Dark */
+@media (-moz-pref("mod.ayu_zen.variant", "dark")) {
+  :root {
+    --ayu-bg: #0f1419;
+    --ayu-surface: #131721;
+    --ayu-raised: #2d3640;
+    --ayu-muted: #5c6773;
+    --ayu-fg: #bfbdb6;
+    --ayu-accent: #e6b450;
+    --ayu-orange: #ff8f40;
+    --ayu-red: #d95757;
+    --ayu-green: #aad94c;
+    --ayu-blue: #59c2ff;
+    color-scheme: dark !important;
+  }
+}
+
+/* Zen UI */
+:root {
+  --zen-primary-color: var(--ayu-accent) !important;
+
+  --zen-branding-bg: var(--ayu-bg) !important;
+  --zen-branding-bg-reverse: var(--ayu-fg) !important;
+
+  --zen-colors-primary: color-mix(
+    in srgb,
+    var(--ayu-accent) 15%,
+    var(--ayu-bg)
+  ) !important;
+  --zen-colors-secondary: var(--ayu-surface) !important;
+  --zen-colors-tertiary: var(--ayu-bg) !important;
+  --zen-colors-hover-bg: var(--ayu-raised) !important;
+  --zen-colors-primary-foreground: var(--ayu-fg) !important;
+  --zen-colors-border: var(--ayu-raised) !important;
+  --zen-colors-border-contrast: var(--ayu-muted) !important;
+  --zen-colors-input-bg: var(--ayu-surface) !important;
+
+  --zen-main-browser-background: var(--ayu-bg) !important;
+  --zen-main-browser-background-toolbar: var(--ayu-bg) !important;
+
+  --zen-dialog-background: var(--ayu-surface) !important;
+  --zen-urlbar-background: var(--ayu-surface) !important;
+
+  --zen-toolbar-element-bg: var(--ayu-surface) !important;
+  --zen-toolbar-element-bg-hover: var(--ayu-raised) !important;
+
+  --zen-sidebar-notification-bg: color-mix(
+    in srgb,
+    var(--ayu-accent) 15%,
+    var(--ayu-surface)
+  ) !important;
+
+  --zen-sidebar-themed-icon-fill: var(--ayu-fg) !important;
+
+  /* Firefox chrome */
+  --toolbox-textcolor: var(--ayu-fg) !important;
+  --toolbar-bgcolor: var(--ayu-surface) !important;
+  --toolbar-color: var(--ayu-fg) !important;
+
+  --toolbar-field-background-color: var(--ayu-surface) !important;
+  --toolbar-field-focus-background-color: var(--ayu-raised) !important;
+  --toolbar-field-color: var(--ayu-fg) !important;
+
+  --tab-selected-bgcolor: var(--ayu-raised) !important;
+  --tab-selected-color: var(--ayu-fg) !important;
+
+  --arrowpanel-background: var(--ayu-surface) !important;
+  --arrowpanel-color: var(--ayu-fg) !important;
+
+  --urlbar-box-hover-bgcolor: var(--ayu-raised) !important;
+  --urlbar-box-active-bgcolor: var(--ayu-raised) !important;
+
+  --toolbarbutton-icon-fill-attention: var(--ayu-orange) !important;
+  --focus-outline-color: var(--ayu-accent) !important;
+}

@@ -1,0 +1,13 @@
+{
+  "id": "ayu-zen",
+  "name": "Ayu for Zen",
+  "description": "Ayu Dark, Light, Mirage and Evolve for Zen Browser",
+  "author": "Kazoku",
+  "version": "1.0.0",
+  "style": {
+    "chrome": "chrome.css"
+  },
+  "preferences": "preferences.json",
+  "fork": ["zen"],
+  "tags": ["theme", "ayu", "colors"]
+}
