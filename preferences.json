@@ -4,7 +4,6 @@
     "label": "Variant",
     "type": "dropdown",
     "defaultValue": "light",
-    "placeholder": false,
     "options": [
       { "label": "Light", "value": "light" },
       { "label": "Mirage", "value": "mirage" },

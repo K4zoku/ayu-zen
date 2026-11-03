@@ -7,12 +7,6 @@
   "style": {
     "chrome": "chrome.css"
   },
-  "scripts": {
-    "ayu-scheme.uc.mjs": {
-      "include": ["chrome://browser/content/browser.xhtml"]
-    }
-  },
-  "supportsUnload": true,
   "preferences": "preferences.json",
   "fork": ["zen"],
   "tags": ["theme", "ayu", "colors"]
