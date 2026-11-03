@@ -239,9 +239,25 @@ menupopup {
     width: 3px;
     background-color: var(--ayu-accent);
     pointer-events: none;
+
+    @media (-moz-pref("mod.ayu_zen.indicator_width", "4px")) {
+      width: 4px;
+    }
+
+    @media (-moz-pref("mod.ayu_zen.indicator_width", "5px")) {
+      width: 5px;
+    }
+
+    @media (-moz-pref("mod.ayu_zen.indicator_width", "6px")) {
+      width: 6px;
+    }
+
+    @media (-moz-pref("mod.ayu_zen.indicator_width", "7px")) {
+      width: 7px;
+    }
   }
 
-  /* Container tabs use their assigned color */
+  /* Container color */
   #navigator-toolbox
     .tabbrowser-tab[selected][usercontextid]:not([usercontextid="0"])
     .tab-background::after {

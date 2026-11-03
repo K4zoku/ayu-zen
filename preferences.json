@@ -16,5 +16,18 @@
     "label": "Active Tab Indicator",
     "type": "checkbox",
     "defaultValue": true
+  },
+  {
+    "property": "mod.ayu_zen.indicator_width",
+    "label": "Indicator Width",
+    "type": "dropdown",
+    "defaultValue": "3px",
+    "options": [
+      { "label": "Smallest", "value": "3px" },
+      { "label": "Small", "value": "4px" },
+      { "label": "Medium", "value": "5px" },
+      { "label": "Large", "value": "6px" },
+      { "label": "Largest", "value": "7px" }
+    ]
   }
 ]
