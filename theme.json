@@ -8,6 +8,9 @@
     "chrome": "chrome.css",
     "content": "content.css"
   },
+  "scripts": {
+    "ayu-content.sys.mjs": {}
+  },
   "preferences": "preferences.json",
   "fork": ["zen"],
   "tags": ["theme", "ayu", "colors"]
