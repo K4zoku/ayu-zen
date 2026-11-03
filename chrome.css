@@ -122,3 +122,99 @@
   --toolbarbutton-icon-fill-attention: var(--ayu-orange) !important;
   --focus-outline-color: var(--ayu-accent) !important;
 }
+
+/* Zen's UI color scheme */
+:root {
+  --ayu-zen-scheme: light;
+  --ayu-on-primary: var(--ayu-bg);
+
+  /* Darken the accent where Zen uses it as a foreground color. */
+  --ayu-ui-accent: color-mix(
+    in srgb,
+    var(--ayu-accent) 65%,
+    black
+  );
+
+  --zen-primary-color: var(--ayu-ui-accent) !important;
+
+  --zen-colors-primary: color-mix(
+    in srgb,
+    var(--ayu-accent) 50%,
+    black
+  ) !important;
+
+  --toolbar-color-scheme: var(--ayu-zen-scheme) !important;
+}
+
+@media
+  (-moz-pref("mod.ayu_zen.variant", "mirage")),
+  (-moz-pref("mod.ayu_zen.variant", "dark")),
+  (-moz-pref("mod.ayu_zen.variant", "evolve")) {
+  :root {
+    --ayu-zen-scheme: dark;
+    --ayu-on-primary: var(--ayu-fg);
+    --ayu-ui-accent: var(--ayu-accent);
+
+    --zen-colors-primary: color-mix(
+      in srgb,
+      var(--ayu-accent) 20%,
+      var(--ayu-bg)
+    ) !important;
+  }
+}
+
+/* Zen sets color schemes on several elements independently. */
+:root,
+#browser,
+#urlbar[breakout-extend],
+zen-workspace,
+#zen-browser-background,
+#zen-toolbar-background {
+  color-scheme: var(--ayu-zen-scheme) !important;
+}
+
+/* Workspace background, normally overridden by inline styles. */
+#zen-browser-background {
+  --zen-main-browser-background: var(--ayu-bg) !important;
+  --zen-main-browser-background-old: var(--ayu-bg) !important;
+  --zen-background-opacity: 1 !important;
+}
+
+/* Toolbar background, also controlled by Zen's gradient manager. */
+#zen-toolbar-background {
+  --zen-main-browser-background-toolbar: var(--ayu-bg) !important;
+  --zen-main-browser-background-toolbar-old: var(--ayu-bg) !important;
+  --zen-background-opacity: 1 !important;
+}
+
+#zen-main-app-wrapper {
+  --zen-themed-toolbar-bg-transparent: var(--ayu-bg) !important;
+}
+
+/* Workspace-specific colors override the generated inline palette. */
+zen-workspace {
+  --toolbox-textcolor: var(--ayu-fg) !important;
+  --zen-primary-color: var(--ayu-ui-accent) !important;
+
+  --tab-background-color-selected: var(--ayu-raised) !important;
+  --tab-text-color-selected: var(--ayu-fg) !important;
+}
+
+/* Popups */
+panel,
+menupopup {
+  --arrowpanel-background: var(--ayu-surface) !important;
+  --arrowpanel-color: var(--ayu-fg) !important;
+  --panel-background-color: var(--ayu-surface) !important;
+  --panel-color: var(--ayu-fg) !important;
+
+  color-scheme: var(--ayu-zen-scheme) !important;
+}
+
+/* Zen uses the primary color for confirmation hints. */
+#confirmation-hint {
+  --arrowpanel-background: var(--zen-colors-primary) !important;
+  --arrowpanel-color: var(--ayu-on-primary) !important;
+  --panel-background-color: var(--zen-colors-primary) !important;
+  --panel-color: var(--ayu-on-primary) !important;
+}
