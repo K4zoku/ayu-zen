@@ -1,4 +1,8 @@
-/* Ayu Light */
+/* =========================================================
+ * Ayu palettes
+ * ========================================================= */
+
+/* Light */
 @media (-moz-pref("zen.view.window.scheme", 1)),
   (-moz-pref("zen.view.window.scheme", 2)) and
     (not (-moz-system-dark-theme)) {
@@ -8,42 +12,20 @@
     --ayu-raised: #d8d8d7;
     --ayu-muted: #828c9a;
     --ayu-fg: #5c6166;
+
     --ayu-accent: #f29718;
     --ayu-orange: #fa8532;
     --ayu-red: #e65050;
     --ayu-green: #86b300;
     --ayu-blue: #22a4e6;
-    --ayu-on-primary: var(--ayu-bg);
-    --ayu-ui-accent: color-mix(in srgb, var(--ayu-accent) 65%, black);
-    --ayu-ui-primary: color-mix(in srgb, var(--ayu-accent) 50%, black);
   }
 }
 
-/* Zen Dark, or Zen Auto with a dark system theme */
+/* Dark appearance */
 @media (-moz-pref("zen.view.window.scheme", 0)),
   (-moz-pref("zen.view.window.scheme", 2)) and (-moz-system-dark-theme) {
-  :root {
-    --ayu-on-primary: var(--ayu-fg);
-    --ayu-ui-accent: var(--ayu-accent);
-    --ayu-ui-primary: color-mix(in srgb, var(--ayu-accent) 20%, var(--ayu-bg));
-  }
 
-  /* Ayu Dark */
-  @media (-moz-pref("mod.ayu_zen.variant", "dark")) {
-    :root {
-      --ayu-bg: #0f1419;
-      --ayu-surface: #131721;
-      --ayu-raised: #2d3640;
-      --ayu-muted: #5c6773;
-      --ayu-fg: #bfbdb6;
-      --ayu-accent: #e6b450;
-      --ayu-orange: #ff8f40;
-      --ayu-red: #d95757;
-      --ayu-green: #aad94c;
-      --ayu-blue: #59c2ff;
-    }
-  }
-
+  /* Mirage */
   @media (-moz-pref("mod.ayu_zen.variant", "mirage")) {
     :root {
       --ayu-bg: #1f2430;
@@ -51,6 +33,7 @@
       --ayu-raised: #323843;
       --ayu-muted: #565b66;
       --ayu-fg: #cccac2;
+
       --ayu-accent: #ffcc66;
       --ayu-orange: #ffa659;
       --ayu-red: #ff6666;
@@ -59,6 +42,24 @@
     }
   }
 
+  /* Dark */
+  @media (-moz-pref("mod.ayu_zen.variant", "dark")) {
+    :root {
+      --ayu-bg: #0f1419;
+      --ayu-surface: #131721;
+      --ayu-raised: #2d3640;
+      --ayu-muted: #5c6773;
+      --ayu-fg: #bfbdb6;
+
+      --ayu-accent: #e6b450;
+      --ayu-orange: #ff8f40;
+      --ayu-red: #d95757;
+      --ayu-green: #aad94c;
+      --ayu-blue: #59c2ff;
+    }
+  }
+
+  /* Evolve */
   @media (-moz-pref("mod.ayu_zen.variant", "evolve")) {
     :root {
       --ayu-bg: #020202;
@@ -66,6 +67,7 @@
       --ayu-raised: #2d3640;
       --ayu-muted: #5c6773;
       --ayu-fg: #bfbdb6;
+
       --ayu-accent: #e6b450;
       --ayu-orange: #ff8f40;
       --ayu-red: #dd3e25;
@@ -75,79 +77,130 @@
   }
 }
 
-/* Zen UI */
+/* =========================================================
+ * Zen theme mapping
+ * ========================================================= */
+
 :root {
+  /* Accent */
   --zen-primary-color: var(--ayu-accent) !important;
 
+  /* Branding */
   --zen-branding-bg: var(--ayu-bg) !important;
   --zen-branding-bg-reverse: var(--ayu-fg) !important;
 
-  --zen-colors-primary: color-mix(
-    in srgb,
-    var(--ayu-accent) 15%,
-    var(--ayu-bg)
-  ) !important;
-  --zen-colors-secondary: var(--ayu-surface) !important;
-  --zen-colors-tertiary: var(--ayu-bg) !important;
+  /* Surfaces */
+  --zen-colors-primary: var(--ayu-raised) !important;
+  --zen-colors-secondary: var(--ayu-raised) !important;
+  --zen-colors-tertiary: var(--ayu-surface) !important;
   --zen-colors-hover-bg: var(--ayu-raised) !important;
+
   --zen-colors-primary-foreground: var(--ayu-fg) !important;
   --zen-colors-border: var(--ayu-raised) !important;
   --zen-colors-border-contrast: var(--ayu-muted) !important;
   --zen-colors-input-bg: var(--ayu-surface) !important;
 
+  /* Main backgrounds */
   --zen-main-browser-background: var(--ayu-bg) !important;
   --zen-main-browser-background-toolbar: var(--ayu-bg) !important;
+
+  --zen-themed-toolbar-bg: var(--ayu-surface) !important;
+  --zen-themed-toolbar-bg-transparent: var(--ayu-bg) !important;
 
   --zen-dialog-background: var(--ayu-surface) !important;
   --zen-urlbar-background: var(--ayu-surface) !important;
 
+  /* Toolbar elements */
   --zen-toolbar-element-bg: var(--ayu-surface) !important;
   --zen-toolbar-element-bg-hover: var(--ayu-raised) !important;
 
+  /* Sidebar */
+  --zen-sidebar-themed-icon-fill: var(--ayu-fg) !important;
   --zen-sidebar-notification-bg: color-mix(
     in srgb,
     var(--ayu-accent) 15%,
     var(--ayu-surface)
   ) !important;
 
-  --zen-sidebar-themed-icon-fill: var(--ayu-fg) !important;
+  /* =======================================================
+   * Firefox chrome foreground
+   * ======================================================= */
 
-  /* Firefox chrome */
   --toolbox-textcolor: var(--ayu-fg) !important;
-  --toolbar-bgcolor: var(--ayu-surface) !important;
+  --lwt-text-color: var(--ayu-fg) !important;
+
   --toolbar-color: var(--ayu-fg) !important;
+  --toolbar-text-color: var(--ayu-fg) !important;
+
+  --toolbarbutton-icon-fill: var(--ayu-fg) !important;
+  --toolbarbutton-icon-fill-attention: var(--ayu-accent) !important;
+
+  --toolbar-field-color: var(--ayu-fg) !important;
+  --toolbar-field-focus-color: var(--ayu-fg) !important;
+
+  --sidebar-text-color: var(--ayu-fg) !important;
+  --lwt-sidebar-text-color: var(--ayu-fg) !important;
+
+  --tab-selected-color: var(--ayu-fg) !important;
+  --tab-selected-textcolor: var(--ayu-fg) !important;
+
+  --arrowpanel-color: var(--ayu-fg) !important;
+  --panel-color: var(--ayu-fg) !important;
+
+  /* =======================================================
+   * Firefox chrome backgrounds
+   * ======================================================= */
+
+  --toolbar-bgcolor: var(--ayu-surface) !important;
+  --toolbox-bgcolor-inactive: var(--ayu-bg) !important;
 
   --toolbar-field-background-color: var(--ayu-surface) !important;
   --toolbar-field-focus-background-color: var(--ayu-raised) !important;
-  --toolbar-field-color: var(--ayu-fg) !important;
+
+  --lwt-sidebar-background-color: var(--ayu-surface) !important;
 
   --tab-selected-bgcolor: var(--ayu-raised) !important;
-  --tab-selected-color: var(--ayu-fg) !important;
 
   --arrowpanel-background: var(--ayu-surface) !important;
-  --arrowpanel-color: var(--ayu-fg) !important;
+  --panel-background-color: var(--ayu-surface) !important;
 
+  /* URL bar */
   --urlbar-box-hover-bgcolor: var(--ayu-raised) !important;
   --urlbar-box-active-bgcolor: var(--ayu-raised) !important;
 
-  --toolbarbutton-icon-fill-attention: var(--ayu-orange) !important;
+  /* New tab */
+  --newtab-background-color: var(--ayu-bg) !important;
+  --newtab-text-primary-color: var(--ayu-fg) !important;
+
+  /* Focus */
   --focus-outline-color: var(--ayu-accent) !important;
 }
 
-/* Follow Zen's appearance without overriding its native color scheme. */
-:root {
-  --zen-primary-color: var(--ayu-ui-accent) !important;
-  --zen-colors-primary: var(--ayu-ui-primary) !important;
+/* =========================================================
+ * Zen workspace
+ * ========================================================= */
+
+zen-workspace {
+  --toolbox-textcolor: var(--ayu-fg) !important;
+  --lwt-text-color: var(--ayu-fg) !important;
+
+  --toolbar-color: var(--ayu-fg) !important;
+  --zen-sidebar-themed-icon-fill: var(--ayu-fg) !important;
+
+  --tab-background-color-selected: var(--ayu-raised) !important;
+  --tab-text-color-selected: var(--ayu-fg) !important;
 }
 
-/* Workspace background, normally overridden by inline styles. */
+/* =========================================================
+ * Zen background
+ * ========================================================= */
+
 #zen-browser-background {
   --zen-main-browser-background: var(--ayu-bg) !important;
   --zen-main-browser-background-old: var(--ayu-bg) !important;
   --zen-background-opacity: 1 !important;
 }
 
-/* Toolbar background, also controlled by Zen's gradient manager. */
 #zen-toolbar-background {
   --zen-main-browser-background-toolbar: var(--ayu-bg) !important;
   --zen-main-browser-background-toolbar-old: var(--ayu-bg) !important;
@@ -158,27 +211,15 @@
   --zen-themed-toolbar-bg-transparent: var(--ayu-bg) !important;
 }
 
-/* Workspace-specific colors override the generated inline palette. */
-zen-workspace {
-  --toolbox-textcolor: var(--ayu-fg) !important;
-  --zen-primary-color: var(--ayu-ui-accent) !important;
+/* =========================================================
+ * Popups
+ * ========================================================= */
 
-  --tab-background-color-selected: var(--ayu-raised) !important;
-  --tab-text-color-selected: var(--ayu-fg) !important;
-}
-
-/* Popups */
 panel,
 menupopup {
   --arrowpanel-background: var(--ayu-surface) !important;
   --arrowpanel-color: var(--ayu-fg) !important;
+
   --panel-background-color: var(--ayu-surface) !important;
   --panel-color: var(--ayu-fg) !important;
-}
-/* Zen uses the primary color for confirmation hints. */
-#confirmation-hint {
-  --arrowpanel-background: var(--zen-colors-primary) !important;
-  --arrowpanel-color: var(--ayu-on-primary) !important;
-  --panel-background-color: var(--zen-colors-primary) !important;
-  --panel-color: var(--ayu-on-primary) !important;
 }
