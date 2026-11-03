@@ -5,7 +5,6 @@
     "type": "dropdown",
     "defaultValue": "light",
     "options": [
-      { "label": "Light", "value": "light" },
       { "label": "Mirage", "value": "mirage" },
       { "label": "Dark", "value": "dark" },
       { "label": "Evolve", "value": "evolve" }
