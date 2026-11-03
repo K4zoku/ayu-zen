@@ -13,11 +13,7 @@
 
     /* Accent */
     --color-accent-primary: var(--ayu-content-accent) !important;
-    --color-accent-primary-hover: color-mix(
-      in srgb,
-      var(--ayu-content-accent) 85%,
-      var(--ayu-fg)
-    ) !important;
+    --color-accent-primary-hover: var(--ayu-orange) !important;
     --color-accent-primary-active: var(--ayu-accent) !important;
 
     --in-content-accent-color: var(--ayu-content-accent) !important;
@@ -34,20 +30,10 @@
   }
 
   moz-toggle {
-      --toggle-background-color-pressed: var(--ayu-content-accent) !important;
-
-      --toggle-background-color-pressed-hover: color-mix(
-        in srgb,
-        var(--ayu-content-accent) 90%,
-        var(--ayu-fg)
-      ) !important;
-
-      --toggle-background-color-pressed-active: color-mix(
-        in srgb,
-        var(--ayu-content-accent) 75%,
-        var(--ayu-fg)
-      ) !important;
-    }
+    --toggle-background-color-pressed: var(--ayu-content-accent) !important;
+    --toggle-background-color-pressed-hover: var(--ayu-orange) !important;
+    --toggle-background-color-pressed-active: var(--ayu-accent) !important;
+  }
 }
 
 /* =========================================================
@@ -124,5 +110,4 @@
     --cryptominer-color: var(--ayu-red) !important;
     --tracker-color: var(--ayu-green) !important;
   }
-
 }

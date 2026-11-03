@@ -52,15 +52,11 @@ function update() {
     (name, i) => `--ayu-${name}: ${palettes[variant][i]};`
   ).join("\n");
 
-  const contentAccent = variant === "light"
-    ? "color-mix(in srgb, var(--ayu-accent) 65%, black)"
-    : "var(--ayu-accent)";
-
   const css = `
     @-moz-document url-prefix("about:") {
       :root {
         ${declarations}
-        --ayu-content-accent: ${contentAccent};
+        --ayu-content-accent: var(--ayu-accent);
       }
     }
   `;

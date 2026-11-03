@@ -116,11 +116,7 @@
 
   /* Sidebar */
   --zen-sidebar-themed-icon-fill: var(--ayu-fg) !important;
-  --zen-sidebar-notification-bg: color-mix(
-    in srgb,
-    var(--ayu-accent) 15%,
-    var(--ayu-surface)
-  ) !important;
+  --zen-sidebar-notification-bg: var(--ayu-raised) !important;
 
   /* =======================================================
    * Firefox chrome foreground
