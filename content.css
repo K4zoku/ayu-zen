@@ -31,9 +31,23 @@
     --zen-colors-primary: var(--ayu-raised) !important;
     --zen-colors-secondary: var(--ayu-raised) !important;
     --zen-colors-tertiary: var(--ayu-surface) !important;
-
-    background-color: var(--ayu-bg) !important;
   }
+
+  moz-toggle {
+      --toggle-background-color-pressed: var(--ayu-content-accent) !important;
+
+      --toggle-background-color-pressed-hover: color-mix(
+        in srgb,
+        var(--ayu-content-accent) 90%,
+        var(--ayu-fg)
+      ) !important;
+
+      --toggle-background-color-pressed-active: color-mix(
+        in srgb,
+        var(--ayu-content-accent) 75%,
+        var(--ayu-fg)
+      ) !important;
+    }
 }
 
 /* =========================================================
@@ -79,21 +93,6 @@
     --zen-colors-tertiary: var(--ayu-surface) !important;
     --zen-primary-color: var(--ayu-accent) !important;
   }
-
-  groupbox,
-  moz-card {
-    background-color: var(--ayu-bg) !important;
-  }
-
-  button,
-  groupbox menulist {
-    background-color: var(--ayu-raised) !important;
-    color: var(--ayu-fg) !important;
-  }
-
-  .main-content {
-    background-color: var(--ayu-surface) !important;
-  }
 }
 
 /* =========================================================
@@ -126,7 +125,4 @@
     --tracker-color: var(--ayu-green) !important;
   }
 
-  .card {
-    background-color: var(--ayu-raised) !important;
-  }
 }
